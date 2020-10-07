@@ -5,7 +5,7 @@ from data.bookings import Booking
 class Cage(mongoengine.Document):
 
     registered_date = mongoengine.DateTimeField(default=datetime.datetime.now)
-    name = mongoengine.DateTimeField(required=True)
+    name = mongoengine.StringField(required=True)
     cost = mongoengine.FloatField(required=True)
     square_meters = mongoengine.FloatField(required=True)
     is_carpented = mongoengine.BooleanField(requried=True)
